@@ -6,7 +6,7 @@ export default function index() {
   return (
     <Container>
       <Menu source={menuIcon} />
-      <InputText/>
+      <InputText />
     </Container>
   )
 }
