@@ -39,8 +39,7 @@ const Cards = () => {
       <Scroll showsVerticalScrollIndicator={false}>
         {cards.map((motor) => (
           <Buton key={Math.random()} onPress={() => {
-            navigate('motor', { id: motor._id} )
-            }}> 
+            navigate('motor', { id: motor._id} )}}> 
               <Image source={{
           uri: motor.images[0].url,
         }}
@@ -48,7 +47,6 @@ const Cards = () => {
         <Name>{motor.model}</Name>
           </Buton>
         ))}
-
       </Scroll>
     </Container>
 
