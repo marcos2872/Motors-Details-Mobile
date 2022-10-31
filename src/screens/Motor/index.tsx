@@ -52,7 +52,6 @@ const Motor = () => {
   
   useEffect(() => {
     (async () => {
-      console.log(id.id);
 
       const motor = await getMotorsById(id.id);
       setMotor(motor)

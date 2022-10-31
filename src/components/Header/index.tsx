@@ -1,12 +1,14 @@
-import React from 'react'
-import { Container, InputText, Menu } from './styled'
+import React, { useState } from 'react'
+import { Button, Container, InputText, Menu } from './styled'
 import menuIcon from '../../assets/menu.png'
 
 export default function index() {
   return (
     <Container>
+      <Button>
       <Menu source={menuIcon} />
-      <InputText />
+      </Button>
+      <InputText placeholder='Digite algo' />
     </Container>
   )
 }

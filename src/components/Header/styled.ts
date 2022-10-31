@@ -1,4 +1,6 @@
 import styled from "styled-components/native";
+import * as Animatable from 'react-native-animatable'
+import { Buton } from "../Cards/styled";
 
 export const Container = styled.View`
 background-color: ${({theme}) => theme.COLORS.HEADER};
@@ -7,7 +9,6 @@ height: 100px;
 justify-content: space-around;
 flex-direction: row;
 align-items: center;
-
 `;
 
 export const InputText = styled.TextInput`
@@ -32,4 +33,6 @@ export const Image = styled.Image`
 background-color: transparent;
 width: 20px;
 height: 20px;
+`
+export const Button = styled.TouchableOpacity`
 `

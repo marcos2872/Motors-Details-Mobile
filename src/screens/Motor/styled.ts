@@ -30,6 +30,8 @@ width: 90%;
 padding: 30px;
 border-radius: 10px;
 margin: auto;
+margin-top: 5px;
+margin-bottom: 5px;
 `
 
 export const Text = styled.Text`

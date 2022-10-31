@@ -34,6 +34,7 @@ const Cards = () => {
     })()
   }, [])
 
+
   return (
     <Container>
       <Scroll showsVerticalScrollIndicator={false}>
