@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.VITE_APP_URL_MOTORS,
+  baseURL: 'https://e-motor-api.vercel.app/',
 });
 
 export default api;

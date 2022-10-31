@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Text } from 'react-native'
 import getMotors from '../../utils/getAllMotors';
-import { Card, Scroll, Container, Name, Image } from './styled';
-import mokMotors from '../../utils/mokApi'
+import { Scroll, Container, Name, Image, Buton } from './styled';
+import { useNavigation } from '@react-navigation/native';
 
 type motoType =
   | {
@@ -24,25 +23,28 @@ type motoType =
     }[]
   | undefined;
 
-const styled = () => {
+const Cards = () => {
   const [cards, setCards] = useState<motoType>([])
+  const { navigate } = useNavigation();
 
   useEffect(() => {
     (async () => {
-      // const motors = await getMotors()
-      setCards(mokMotors)
+      const motors = await getMotors();
+      setCards(motors)
     })()
   }, [])
+
   return (
     <Container>
       <Scroll showsVerticalScrollIndicator={false}>
         {cards.map((motor) => (
-          <Card key={Math.random()}>
-            <Image source={{
+          <Buton key={Math.random()} onPress={() => { navigate('motor') }}> 
+              <Image source={{
           uri: motor.images[0].url,
-        }}/>
-            <Name>{motor.model}</Name>
-          </Card>
+        }}
+        />            
+        <Name>{motor.model}</Name>
+          </Buton>
         ))}
 
       </Scroll>
@@ -51,4 +53,4 @@ const styled = () => {
   )
 }
 
-export default styled
+export default Cards

@@ -1,7 +1,7 @@
 export default [
   {
     _id: '634eeb14f8713a80b635f707',
-    model: 'fostons10',
+    model: 'fostons10werevvetvwtvwt',
     tension: 48,
     magnets: 30,
     poles: 27,

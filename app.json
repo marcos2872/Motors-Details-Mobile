@@ -1,10 +1,19 @@
 {
   "expo": {
-    "name": "motorsdetailsmodile",
+    "name": "emotors",
     "slug": "motorsdetailsmodile",
     "version": "1.0.0",
+    "icon": "./src/assets/eletrico 1.png",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.marcosdev.emotors"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ecacb31b-302a-4803-9855-f0bf7a8cbd01"
+      }
+    }
   }
 }
