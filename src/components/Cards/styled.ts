@@ -11,19 +11,7 @@ background-color: transparent;
 width: 400px;
 padding: 5px;
 `
-// export const Card = styled.View`
-// background-color: ${({theme}) => theme.COLORS.CARDS};
-// width: 90%;
-// height: 200px;
-// border-radius: 10px;
-// margin: auto;
-// margin-top: 5px;
-// margin-bottom: 5px;
-// align-items: center;
-// justify-content: space-around;
-// flex-direction: row;
-// padding: 1%;
-// `
+
 export const Name = styled.Text`
 font-family: ${({theme}) => theme.FONTS.MEDIUM};
 width: 30%;

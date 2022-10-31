@@ -38,7 +38,9 @@ const Cards = () => {
     <Container>
       <Scroll showsVerticalScrollIndicator={false}>
         {cards.map((motor) => (
-          <Buton key={Math.random()} onPress={() => { navigate('motor') }}> 
+          <Buton key={Math.random()} onPress={() => {
+            navigate('motor', { id: motor._id} )
+            }}> 
               <Image source={{
           uri: motor.images[0].url,
         }}
