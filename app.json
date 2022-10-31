@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "motorsdetailsmodile",
+    "slug": "motorsdetailsmodile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
