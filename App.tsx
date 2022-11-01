@@ -10,6 +10,8 @@ import {
 import { ThemeProvider } from 'styled-components/native';
 import theme from './src/theme/'
 import { Routes } from './src/routes';
+import { Provider } from 'react-redux';
+import store from './src/redux/store';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,7 +23,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Provider store={store}>
       <Routes />
+      </Provider>
     </ThemeProvider>
   );
 }

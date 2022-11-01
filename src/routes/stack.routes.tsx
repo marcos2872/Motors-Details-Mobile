@@ -6,18 +6,28 @@ const {Screen, Navigator} = createNativeStackNavigator();
 
 export function StackRouter() {
   return (
-    <Navigator
-    screenOptions={{
-      headerShown: false
-    }}
-    >
+    <Navigator>
       <Screen
       name= 'home'
       component={Home}
+      options={{
+        headerShown: false
+      }}
       />
       <Screen
       name= 'motor'
       component={Motor}
+      options={{
+        title: 'Detalhes do motor',
+        headerTitleAlign: 'center',
+        headerStyle: {
+          backgroundColor: '#F2CB05',
+        },
+        headerTitleStyle:{
+          fontFamily: 'Roboto_700Bold'
+        }
+
+      }}
       />
     </Navigator>
   )

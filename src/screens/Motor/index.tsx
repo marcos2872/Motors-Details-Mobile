@@ -60,7 +60,7 @@ const Motor = () => {
   
   return (
    <Container>
-    <Header />
+    {/* <Header /> */}
     <Scroll showsVerticalScrollIndicator={false}>
     <Title>{motor.model}</Title>
     <Details>
@@ -79,7 +79,9 @@ const Motor = () => {
         return (
         <ImageM key={Math.random()} source={{
           uri: url,
-        }} />
+        }}
+        alt='foto do motor'
+        />
       )})}
     </Images>
     </Scroll>

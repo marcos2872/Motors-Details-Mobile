@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux';
 import getMotors from '../../utils/getAllMotors';
 import { Scroll, Container, Name, Image, Buton } from './styled';
 import { useNavigation } from '@react-navigation/native';
@@ -25,15 +26,27 @@ type motoType =
 
 const Cards = () => {
   const [cards, setCards] = useState<motoType>([])
+
   const { navigate } = useNavigation();
+  const {search} = useSelector(( {menu} ) => menu)
+
+const getApi = async () => {
+  const motors = await getMotors();
+  setCards(motors)
+
+}
 
   useEffect(() => {
-    (async () => {
-      const motors = await getMotors();
-      setCards(motors)
-    })()
-  }, [])
+    getApi()
+  }, []);
 
+useEffect(() => {
+  if (search === '') {
+    getApi()
+  }
+const cardsFilter = cards.filter(({model}) => model.includes(search))
+setCards(cardsFilter)
+}, [search])
 
   return (
     <Container>
@@ -44,6 +57,7 @@ const Cards = () => {
               <Image source={{
           uri: motor.images[0].url,
         }}
+        alt='foto do motor'
         />            
         <Name>{motor.model}</Name>
           </Buton>
