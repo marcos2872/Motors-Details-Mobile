@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import getMotors from '../../utils/getAllMotors';
-import { Scroll, Container, Name, Image, Buton } from './styled';
+import { Scroll, Container, Name, Buton, Image } from './styled';
 import { useNavigation } from '@react-navigation/native';
+// import Image from '../Image'
 
 type motoType =
   | {
@@ -51,14 +52,10 @@ setCards(cardsFilter)
   return (
     <Container>
       <Scroll showsVerticalScrollIndicator={false}>
-        {cards.map((motor) => (
+        {cards.length > 1 && cards.map((motor) => (
           <Buton key={Math.random()} onPress={() => {
             navigate('motor', { id: motor._id} )}}> 
-              <Image source={{
-          uri: motor.images[0].url,
-        }}
-        alt='foto do motor'
-        />            
+              <Image url={motor.images[0].url} />            
         <Name>{motor.model}</Name>
           </Buton>
         ))}

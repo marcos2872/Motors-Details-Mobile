@@ -7,12 +7,13 @@ const getMotors = async () => {
   try {
     const motors = await api.get('motors');
     const local = await getItem();
-    const isEqual = local === JSON.stringify(motors)
-
+    const isEqual = local === JSON.stringify(motors.data)
+    
     if (isEqual) {
       return JSON.parse(local)
     }
-    await setItem(JSON.stringify(motors))
+    await setItem(JSON.stringify(motors.data))
+
     return JSON.parse(local);
   } catch (error) {
     return JSON.parse(await getItem());

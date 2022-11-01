@@ -1,4 +1,3 @@
-import api from './api';
 import AsyncStorage, {useAsyncStorage} from '@react-native-async-storage/async-storage';
 
 const {getItem} = useAsyncStorage('@emotors:motors');

@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import ImageC from '../Image'
 
 export const Container = styled.View`
 flex: 1;
@@ -18,7 +19,7 @@ width: 30%;
 text-align: center;
 `
 
-export const Image = styled.Image`
+export const Image = styled(ImageC)`
 background-color: transparent;
 border-radius: 10px;
 width: 70%;
