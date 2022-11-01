@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Container, InputText, Menu } from './styled'
 import menuIcon from '../../assets/menu.png'

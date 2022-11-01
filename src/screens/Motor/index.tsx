@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useRoute } from '@react-navigation/native'
 import getMotorsById from '../../utils/getMotorsById'
 import { Container, Details, ImageM, Images, Scroll, Text, Title } from './styled'
-import Header from '../../components/Header'
 
 type ParamsProps = {
   id: string
@@ -60,7 +59,6 @@ const Motor = () => {
   
   return (
    <Container>
-    {/* <Header /> */}
     <Scroll showsVerticalScrollIndicator={false}>
     <Title>{motor.model}</Title>
     <Details>

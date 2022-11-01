@@ -1,9 +1,12 @@
 import api from './api';
+import AsyncStorage, {useAsyncStorage} from '@react-native-async-storage/async-storage';
+
+const {getItem} = useAsyncStorage('@emotors:motors');
 
 const getMotorsById = async (id: string) => {
-  const motors = await api.get('motors');
+  const motors = await getItem()
 
-  const filter = motors.data.find(({ _id }: { _id: string }) => _id === id);
+  const filter = JSON.parse(motors).find(({ _id }: { _id: string }) => _id === id);
 
   return filter;
 };
