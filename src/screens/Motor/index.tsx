@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useRoute } from '@react-navigation/native'
 import getMotorsById from '../../utils/getMotorsById'
-import { Container, Details, ImageM, Images, Scroll, Text, Title } from './styled'
+import { ButonVideo, Container, Details, IconYouTube, ImageM, Images, Scroll, Text, Title } from './styled'
+import { useNavigation } from '@react-navigation/native';
+import iconYou from '../../assets/youtube.png'
 
 type ParamsProps = {
   id: string
@@ -45,7 +47,9 @@ const Motor = () => {
     video: '',
     description: '',
   })
+
   const route  = useRoute()
+  const { navigate } = useNavigation();
 
   const id = route.params as ParamsProps;
   
@@ -71,11 +75,15 @@ const Motor = () => {
       <Text>Comprimento: {motor?.['wire-length']}</Text>
       <Text>Voltas: {motor?.turns}</Text>
       <Text>Descrição: {motor?.description}</Text>
+      <ButonVideo
+      onPress={() => navigate('video', {url: motor.video})}
+      ><IconYouTube source={iconYou} /></ButonVideo>
     </Details>
     <Images>
       {motor?.images.map(({url}) => {
         return (
-        <ImageM key={Math.random()} source={{
+        <ImageM
+        key={Math.random()} source={{
           uri: url,
         }}
         alt='foto do motor'
@@ -87,4 +95,4 @@ const Motor = () => {
   )
 }
 
-export default Motor
+export default Motor;

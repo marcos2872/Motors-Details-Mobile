@@ -5,6 +5,9 @@ export declare global {
       motor: {
         id: string
       };
+      video: {
+        url: string
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+import { Dimensions } from "react-native"
+
 export default {
   COLORS: {
     BACKGROUND: '#79898C',
@@ -11,5 +13,9 @@ export default {
     REGULAR: 'Roboto_400Regular',
     MEDIUM: 'Roboto_500Medium',
     BOLD: 'Roboto_700Bold'
+  },
+
+  WIDTH: {
+    window: Dimensions.get('window').width,
   }
 }

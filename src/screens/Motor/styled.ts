@@ -55,3 +55,17 @@ margin: auto;
 margin-top: 5px;
 margin-bottom: 5px;
 `
+
+export const IconYouTube = styled.Image`
+width: 50px;
+height: 50px;
+`
+
+export const ButonVideo = styled.TouchableOpacity`
+background-color: ${({theme}) => theme.COLORS.BACKGROUND};
+margin-top: 10px;
+color: white;
+width: 0;
+height: 30px;
+border-radius: 5px;
+`

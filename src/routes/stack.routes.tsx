@@ -1,4 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import Video from '../components/Video';
 import Home from '../screens/Home';
 import Motor from '../screens/Motor';
 
@@ -27,6 +28,16 @@ export function StackRouter() {
           fontFamily: 'Roboto_700Bold'
         }
 
+      }}
+      />
+      <Screen
+      name= 'video'
+      component={Video}
+      options={{
+        title: '',
+        headerStyle: {
+          backgroundColor: '#79898C',
+        },
       }}
       />
     </Navigator>
