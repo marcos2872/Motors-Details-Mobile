@@ -84,7 +84,7 @@ const Motor = () => {
         return (
         <ImageM
         key={Math.random()} source={{
-          uri: url,
+          uri: url ? url : null,
         }}
         alt='foto do motor'
         />

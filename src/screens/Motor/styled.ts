@@ -62,10 +62,11 @@ height: 50px;
 `
 
 export const ButonVideo = styled.TouchableOpacity`
-background-color: ${({theme}) => theme.COLORS.BACKGROUND};
+background-color: transparent;
 margin-top: 10px;
 color: white;
-width: 0;
-height: 30px;
+width: 50px;
+height: 40px;
 border-radius: 5px;
+justify-content: center;
 `
