@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import getMotors from '../../utils/getAllMotors';
 import { Scroll, Container, Name, Buton, Image } from './styled';
 import { useNavigation } from '@react-navigation/native';
-// import Image from '../Image'
+import imageLoading from '../../assets/github 1.png';
 
 type motoType =
   | {
@@ -52,10 +52,13 @@ setCards(cardsFilter)
   return (
     <Container>
       <Scroll showsVerticalScrollIndicator={false}>
-        {cards.length > 1 && cards.map((motor) => (
+        {cards.map((motor) => (
           <Buton key={Math.random()} onPress={() => {
             navigate('motor', { id: motor._id} )}}> 
-              <Image url={motor.images[0].url} />            
+              <Image
+              defaultSource={imageLoading}
+              source={{uri: motor.images[0].url || null}}
+              />
         <Name>{motor.model}</Name>
           </Buton>
         ))}

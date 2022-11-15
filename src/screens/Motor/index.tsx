@@ -83,10 +83,11 @@ const Motor = () => {
       {motor?.images.map(({url}) => {
         return (
         <ImageM
-        key={Math.random()} source={{
+        defaultSource={require('../../assets/eletrico 1.png')}
+        key={Math.random()}
+        source={{
           uri: url ? url : null,
         }}
-        alt='foto do motor'
         />
       )})}
     </Images>

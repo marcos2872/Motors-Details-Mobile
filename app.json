@@ -4,6 +4,11 @@
     "slug": "motorsdetailsmodile",
     "version": "1.0.0",
     "icon": "./src/assets/eletrico 1.png",
+    "splash": {
+      "image": "./src/assets/init scren.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#D9D9D9"
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
