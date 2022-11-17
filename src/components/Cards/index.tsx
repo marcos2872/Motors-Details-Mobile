@@ -68,4 +68,4 @@ setCards(cardsFilter)
   )
 }
 
-export default Cards
+export default Cards;
